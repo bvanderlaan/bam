@@ -7,6 +7,7 @@ const COMMANDS = require('include-all')({
   filter: /(.*)\.js$/,
 });
 
+const nconf = require('./lib/config');
 const { extractCommandFromArguments, extractEnvironmentFromArguments } = require('./lib/extractors');
 const help = require('./lib/cmds/help');
 
