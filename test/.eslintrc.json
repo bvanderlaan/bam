@@ -1,0 +1,3 @@
+{
+  "extends": "@vanderlaan/eslint-config-vanderlaan/test"
+}

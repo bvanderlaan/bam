@@ -2,6 +2,12 @@
   "name": "@vanderlaan/bam",
   "version": "1.0.0",
   "description": "A CLI for initializing projects and running Docker commands",
+  "files": [
+    "lib",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
   "scripts": {
     "test": "node_modules/.bin/istanbul cover --dir=reports/coverage _mocha -- --recursive test",
     "watch": "npm test -- --watch",
