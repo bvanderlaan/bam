@@ -1,6 +1,10 @@
 # BAM
 A CLI for initializing projects and running Docker commands
 
+Bam is a command line tool which provides simple commands for common tasks, that is for example if working with containers instead of typing `docker-compose -f docker-compose.yml -f docker-compose.test.yml run --rm my-service script/test`, you can just type `bam test my-service`.
+
+*Bam is used to simplify brining up the application containers and executing the appropriate scripts on them.*
+
 ## What Bam Does
 
 Bam is an ECMAScript command line application which wraps [docker-compose](https://docs.docker.com/compose/reference/) commands.
