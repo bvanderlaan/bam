@@ -1,0 +1,45 @@
+{
+  "name": "@vanderlaan/bam",
+  "version": "1.0.0",
+  "description": "A CLI for initializing projects and running Docker commands",
+  "scripts": {
+    "test": "node_modules/.bin/istanbul cover --dir=reports/coverage _mocha -- --recursive test",
+    "watch": "npm test -- --watch",
+    "lint": "node_modules/.bin/eslint ./; true"
+  },
+  "keywords": [
+    "project",
+    "initialization",
+    "initialize",
+    "init",
+    "cli",
+    "command",
+    "line"
+  ],
+  "engines": {
+    "node": ">=6.9.1",
+    "npm": ">=3.10.8"
+  },
+  "author": {
+    "name": "Brad van der Laan",
+    "email": "brad.vanderlaan@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bvanderlaan/bam.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bvanderlaan/bam/issues"
+  },
+  "homepage": "https://github.com/bvanderlaan/bam",
+  "license": "MIT",
+  "devDependencies": {
+    "@vanderlaan/eslint-config-vanderlaan": "^1.0.0",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "sinon": "^6.1.4",
+    "sinon-chai": "^3.2.0"
+  }
+}

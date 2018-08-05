@@ -1,0 +1,6 @@
+{
+  "extends": "@vanderlaan/eslint-config-vanderlaan",
+  "rules": {
+    "strict": 0
+  }
+}
