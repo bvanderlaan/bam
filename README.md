@@ -5,6 +5,8 @@ Bam is a command line tool which provides simple commands for common tasks, that
 
 *Bam is used to simplify brining up the application containers and executing the appropriate scripts on them.*
 
+Bam can also be used to generate new projects much like how `git init` or `npm init` does via its `bam init` command.
+
 ## What Bam Does
 
 Bam is an ECMAScript command line application which wraps [docker-compose](https://docs.docker.com/compose/reference/) commands.
@@ -19,6 +21,17 @@ Bam allows you to use the service names for your applications, the names defined
 Bam automatically inserts common docker-compose command line arguments so you don't have to, such as ensuring that you always run containers in detached mode and that one time test containers are removed.
 
 Bam will allow you to add any supported docker-compose flags to the underlining docker-compose command, such as `bam log --tail=15 my-service`, where `--tail` is a flag for the docker-compose command [logs](https://docs.docker.com/compose/reference/logs/).
+
+### Initializing a New Project
+
+Bam can also be used to create a new project pre-populated with a template structure, tests, and common configurations.
+
+To use this command to initialize a new project create a new empty directory, navigate into said directory then execute `bam init`.
+
+That will kick off a tool which will prompt you for input such as the name of the project, starting version,
+and type of project (i.e. NodeJS project). Once it has all the required input from you it will generate a new project under the current directory. It will setup all the boiler plate files such as the `package.json` complete with base dependencies, the `script` folder for starting up, setting up and testing the project, the DockerFile, and pre-setup docker-compose yaml files.
+
+The project will even have a local git repository setup and ready to be pushed to a remote repository.
 
 ## How to use Bam
 

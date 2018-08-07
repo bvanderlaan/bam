@@ -50,12 +50,20 @@
     "chai-as-promised": "^7.1.1",
     "istanbul": "^0.4.5",
     "mocha": "^5.2.0",
+    "proxyquire": "^2.0.1",
     "sinon": "^6.1.4",
     "sinon-chai": "^3.2.0"
   },
   "dependencies": {
+    "bluebird": "^3.5.1",
     "cli-color": "^1.2.0",
+    "common-tags": "^1.8.0",
     "include-all": "^4.0.3",
-    "nconf": "^0.10.0"
+    "latest-version": "^4.0.0",
+    "mkdirp": "^0.5.1",
+    "nconf": "^0.10.0",
+    "prompt": "^1.0.0",
+    "simple-git": "^1.96.0",
+    "yamljs": "^0.3.0"
   }
 }
