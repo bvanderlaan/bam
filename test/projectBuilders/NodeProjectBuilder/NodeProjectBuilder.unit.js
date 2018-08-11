@@ -57,6 +57,18 @@ describe('Project builders', () => {
       expect(b.template).to.be.an.instanceof(decorators.ServiceProjectDecorator);
     });
 
+    it('should use the Cassandra decorator', () => {
+      const options = {
+        name: 'my-cool-name',
+        description: 'my project is cool',
+        version: '1.2.3',
+        cassandra: 'yes',
+        cassandra_keyspace: '',
+      };
+      const b = new NodeProjectBuilder(options);
+      expect(b.template).to.be.an.instanceof(decorators.CassandraProjectDecorator);
+    });
+
     describe('when failed to write any of the files', () => {
       before(() => {
         writerStub.withArgs('./package.json', sinon.match.string).rejects(new Error('boom'));
