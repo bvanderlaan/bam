@@ -56,7 +56,7 @@ const templateMock = {
             });
           `,
         },
-        'server.js': stripIndents`const { addStrategies: addPassportStrategies } = require('./config/passport');
+        'server.js': stripIndents`const { options: swaggerOptions, spec } = require('./config/swagger');
           Promise.resolve()
             .then(() => console.log('all done'));`,
       },
@@ -346,7 +346,7 @@ describe('Project builders', () => {
               .and.have.property('files')
               .which.has.property('src')
               .which.has.property('server.js')
-              .that.match(/.+(\r\n|\r|\n).+(\r\n|\r|\n)(\r\n|\r|\n)Promise\.resolve\(\)(\r\n|\r|\n) {2}\.then\(\(\) => setupCassie\(\)\)(\r\n|\r|\n)\.then\(\(\) => console.log\('all done'\)\);/);
+              .that.match(/.+(\r\n|\r|\n).+(\r\n|\r|\n)(\r\n|\r|\n)Promise\.resolve\(\)(\r\n|\r|\n) {2}\.then\(\(\) => setupCassie\(\)\)(\r\n|\r|\n)\.then\(\(\) => console\.log\('all done'\)\);/);
           });
         });
 
