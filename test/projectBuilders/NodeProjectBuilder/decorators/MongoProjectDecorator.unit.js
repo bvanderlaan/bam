@@ -33,6 +33,7 @@ const templateMock = {
   build() {
     this.files = {
       'package.json': '{ "dependencies": {} }',
+      '.eslintrc.json': '  "strict": 0',
       'docker-compose.yml': 'version: \'3.2\'\nservices:\n  my-test-template:\n    environment:\n      - APP_PORT=2082\n',
       'docker-compose.test.yml': 'version: \'3.2\'\nservices:\n  my-test-template:\n    environment:\n      - APP_PORT=2082\n',
       'docker-compose.development.yml': 'version: \'3.2\'\nservices:\n  my-test-template:\n    environment:\n      - APP_PORT=2082\n',
