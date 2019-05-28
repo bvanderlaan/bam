@@ -347,7 +347,7 @@ describe('Project builders', () => {
               });
           });
 
-          it('should add a mocha-jenkins-reporter to the package.json devDependencies list', () => {
+          it('should add a nyc to the package.json devDependencies list', () => {
             const options = {
               name: 'my-test-template',
               description: 'a test template for testing',
@@ -357,21 +357,7 @@ describe('Project builders', () => {
             return expect(t.build()).to.eventually.be.fulfilled
               .then(({ files }) => {
                 expect(files).to.have.property('package.json')
-                  .which.matches(/"devDependencies": {((.|\n)*)"mocha-jenkins-reporter": "\^1.2.3"/);
-              });
-          });
-
-          it('should add a istanbul to the package.json devDependencies list', () => {
-            const options = {
-              name: 'my-test-template',
-              description: 'a test template for testing',
-              version: '1.2.3',
-            };
-            const t = new NodeProjectTemplate(options, latestVersion);
-            return expect(t.build()).to.eventually.be.fulfilled
-              .then(({ files }) => {
-                expect(files).to.have.property('package.json')
-                  .which.matches(/"devDependencies": {((.|\n)*)"istanbul": "\^1.2.3"/);
+                  .which.matches(/"devDependencies": {((.|\n)*)"nyc": "\^1.2.3"/);
               });
           });
         });
