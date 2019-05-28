@@ -14,7 +14,7 @@
     "README.md"
   ],
   "scripts": {
-    "test": "node_modules/.bin/istanbul cover --dir=reports/coverage _mocha -- --recursive test",
+    "test": "node_modules/.bin/nyc --report-dir=reports/coverage --reporter text --reporter html mocha --recursive test",
     "watch": "npm test -- --watch",
     "lint": "node_modules/.bin/eslint ./; true"
   },
@@ -48,8 +48,8 @@
     "@vanderlaan/eslint-config-vanderlaan": "^1.0.0",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
-    "istanbul": "^0.4.5",
     "mocha": "^5.2.0",
+    "nyc": "^14.1.1",
     "proxyquire": "^2.0.1",
     "sinon": "^6.1.4",
     "sinon-chai": "^3.2.0"
